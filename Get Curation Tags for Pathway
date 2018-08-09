@@ -1,0 +1,24 @@
+#+ summary: Get Curation Tags
+#+ endpoint_in_url: False
+#+ endpoint: http://query.wikidata.org/sparql
+#+ tags:
+#+   - Pathway information
+#+ enumerate:
+#+   - pwId
+
+PREFIX wp:      <http://vocabularies.wikipathways.org/wp#> 
+PREFIX dc:      <http://purl.org/dc/elements/1.1/> 
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf:    <http://xmlns.com/foaf/0.1/> 
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+
+SELECT (substr(str(?ontTag), 41) as ?pwOntologyTerm) str(?titleLit) as ?title ?pathway 
+WHERE {
+  ?pathwayRDF wp:ontologyTag ?ontTag ;
+    foaf:page ?pathway ;
+    dc:title ?titleLit ;
+    dcterms:identifier ?_pwId_string . 
+
+  FILTER (!regex(str(?pathway), "group"))
+  FILTER ( regex(str(?ontTag), "vocabularies.wikipathways"))
+}
