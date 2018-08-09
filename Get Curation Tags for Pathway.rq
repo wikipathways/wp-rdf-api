@@ -20,7 +20,7 @@ WHERE {
   ?pathwayRDF wp:ontologyTag ?ontTag ;
     foaf:page ?pathway ;
     dc:title ?titleLit ;
-    dc:identifier <http://identifier.org/wikipathways/WP1425> . 
+    dcterms:identifier ?_pdId . 
 
   FILTER (!regex(str(?pathway), "group"))
   FILTER ( regex(str(?ontTag), "vocabularies.wikipathways"))
