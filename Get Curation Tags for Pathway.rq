@@ -12,7 +12,7 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX foaf:    <http://xmlns.com/foaf/0.1/> 
 PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
 
-SELECT (substr(str(?ontTag), 41) as ?pwOntologyTerm) str(?titleLit) as ?title ?pathway 
+SELECT substr(str(?ontTag), 41) AS ?pwOntologyTerm str(?titleLit) AS ?title ?pathway 
 WHERE {
   ?pathwayRDF wp:ontologyTag ?ontTag ;
     foaf:page ?pathway ;
