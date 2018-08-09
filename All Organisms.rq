@@ -7,7 +7,7 @@
 PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX wp: <http://vocabularies.wikipathways.org/wp#>
 
-SELECT DISTINCT ?organism str(?label) as ?name
+SELECT DISTINCT (str(?label) as ?organism)
 WHERE {
     ?concept wp:organism ?organism ;
       wp:organismName ?label .
