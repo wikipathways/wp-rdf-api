@@ -1,0 +1,14 @@
+#+ summary: Lists Organisms
+#+ endpoint_in_url: False
+#+ endpoint: http://sparql.wikipathways.org/
+#+ tags:
+#+   - Organism list
+
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wp: <http://vocabularies.wikipathways.org/wp#>
+
+SELECT DISTINCT ?organism str(?label) as ?name
+WHERE {
+    ?concept wp:organism ?organism ;
+      wp:organismName ?label .
+}
