@@ -1,6 +1,6 @@
 #+ summary: Lists Organisms
 #+ endpoint_in_url: False
-#+ endpoint: http://sparql.wikipathways.org/
+#+ endpoint: http://sparql.wikipathways.org/sparql
 #+ tags:
 #+   - Organism list
 
