@@ -1,6 +1,6 @@
 #+ summary: Get Curation Tags
 #+ endpoint_in_url: False
-#+ endpoint: http://query.wikidata.org/sparql
+#+ endpoint: http://sparql.wikipathways.org/sparql
 #+ tags:
 #+   - Pathway information
 #+ enumerate:
