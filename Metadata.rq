@@ -1,5 +1,6 @@
 #+ summary: Lists Metadata
 #+ endpoint_in_url: False
+#+ endpoint: http://85.214.42.229:8890/sparql/
 #+ tags:
 #+   - Metadata
 SELECT DISTINCT ?dataset ?titleLit ?date ?license 
