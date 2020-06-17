@@ -3,6 +3,12 @@
 #+ endpoint: http://85.214.42.229:8890/sparql/
 #+ tags:
 #+   - Metadata
+
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wp: <http://vocabularies.wikipathways.org/wp#>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX pav: <http://purl.org/pav/>
 SELECT DISTINCT ?dataset ?titleLit ?date ?license 
 WHERE {
    ?dataset a void:Dataset ;
