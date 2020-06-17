@@ -2,8 +2,7 @@
 #+ endpoint_in_url: False
 #+ tags:
 #+   - Metadata
-
-SELECT DISTINCT ?dataset (str(?titleLit) as ?title) ?date ?license 
+SELECT DISTINCT ?dataset ?titleLit ?date ?license 
 WHERE {
    ?dataset a void:Dataset ;
    dcterms:title ?titleLit ;
