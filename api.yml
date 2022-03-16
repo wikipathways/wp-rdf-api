@@ -1,0 +1,9 @@
+title: WikiPathways API
+description: Queries mimicking the WikiPathway webserive
+contact:
+  name: Egon Willighagen
+  url: https://orcid.org/0000-0001-7542-0286
+licence: https://creativecommons.org/licenses/by/4.0/
+sparql_endpoint: https://sparql.wikipathways.org/sparql
+queries:
+  - https://raw.githubusercontent.com/egonw/wp-rdf-api/master/queries/All Organisms.rq
